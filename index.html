@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+
+<body>
+
+<h1>Formulaire de paiement</h1>
+
+<div>
+
+    <form method="post" action="connecte.html">
+
+        <h2>Informations de contact</h2>
+        <div>
+            <label>Nom : <input name="nom" type="text" required></label><br>
+            <label>Courriel : <input id="email" name="courriel" type="email" required placeholder="user@domain.com"
+                                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></label><br>
+            <label>Province :
+                <select name="province" required>
+                    <option value="al">Alberta</option>
+                    <option value="cb">Colombie-Britannique</option>
+                    <option value="ile">Île-du-Prince-Édouard</option>
+                    <option value="man">Manitoba</option>
+                    <option value="nb">Nouveau-Brunswick</option>
+                    <option value="ne">Nouvelle-Écosse</option>
+                    <option value="nunavut">Nunavut</option>
+                    <option value="on">Ontario</option>
+                    <option value="qc">Québec</option>
+                    <option value="sask">Saskatchewan</option>
+                    <option value="lab">Terre-Neuve-et-Labrador</option>
+                    <option value="tno">Territoires du Nord-Ouest</option>
+                    <option value="yukon">Yukon</option>
+                </select></label><br>
+        </div>
+
+        <h2>Informations de paiement</h2>
+        <div>
+            <label>Numéro : <input type="radio" name="carte_de_credit" value="VISA" required>VISA</label>
+            <label><input type="radio" name="carte_de_credit" value="MasterCard" required>MasterCard</label>
+            <label><input type="radio" name="carte_de_credit" value="American Express" required>American Express</label>
+            <br>
+            <label>Type de paiement : <input name="type_de_paiement" type="text" required
+                                             pattern="^(?:(?:\d{4}[- ]){3}\d{4}|\d{16})$"></label>
+        </div>
+
+        <h2>Informations de livraison</h2>
+        <div>
+            <label><input type="checkbox" name="Signature" value="Signature">Signature requise</label> <br>
+            <label><input type="checkbox" name="Adresse" value="Adresse">Livrer à la même adresse que l'adresse de paiement</label>
+        </div>
+
+        <input type="submit" name="Envoyer" required onclick="ajouterEmail()">
+        <input type="reset" name="Annuler" onclick="effacer()">
+    </form>
+
+</div>
+
+</body>
+</html>

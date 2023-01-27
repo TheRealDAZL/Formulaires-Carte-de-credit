@@ -1,0 +1,7 @@
+input:focus:invalid {
+    background-color: bisque;
+}
+
+input:valid {
+    background-color: aqua;
+}
